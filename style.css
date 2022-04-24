@@ -96,7 +96,7 @@ h1 {
     grid-area: down;
 }
 
-@media (orientation: landscape) and (max-width: 700px) {
+@media (orientation: landscape) and (min-width: 700px) {
     body {
         flex-direction: row;
     }
