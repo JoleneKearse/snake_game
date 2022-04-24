@@ -1,9 +1,6 @@
 let inputDirection = {x: 0, y: 0}  // initial value
 let lastInputDirection = {x: 0, y: 0}
-const up = document.querySelector(".up")
-const left = document.querySelector(".left")
-const right = document.querySelector(".right")
-const down = document.querySelector(".down")
+const button = document.querySelectorAll(".button")
 
 // set up code to modify inputDirection on key presses
 window.addEventListener("keydown", e => {
@@ -31,10 +28,23 @@ window.addEventListener("keydown", e => {
 })
 
 // set up input for mobile devices
-up.addEventListener("click", () => (inputDirection = {x: 0, y: -1}))
-left.document.addEventListener("click", () => (inputDirection = {x: -1, y: 0}))
-right.document.addEventListener("click", () => (inputDirection = {x: 1, y: 0}))
-down.document.addEventListener("click", () => (inputDirection = {x: 0, y: 1}))
+button.forEach(ele => {
+    ele.addEventListener("click", function handleClick(event) {
+        if (ele.classList.contains("up")) {
+            console.log("up clicked")
+            inputDirection = {x: 0, y: -1}
+        } else if (ele.classList.contains("down")) {
+            console.log("down clicked")
+            inputDirection = {x: 0, y: 1}
+        } else if (ele.classList.contains("left")) {
+            console.log("left clicked")
+            inputDirection = {x: -1, y: 0}
+        } else if (ele.classList.contains("right")) {
+            console.log("right clicked")
+            inputDirection = {x: 1, y: 0}
+        }
+    })
+})
 
 export function getInputDirection() {
     lastInputDirection = inputDirection
