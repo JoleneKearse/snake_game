@@ -76,7 +76,7 @@ h1 {
         ". up ."
         "left . right"
         ". down .";
-    width: 60vw;
+    width: 65vw;
     margin-inline: auto;
 }
 
@@ -94,4 +94,24 @@ h1 {
 
 .down {
     grid-area: down;
+}
+
+@media (orientation: landscape) and (max-width: 700px) {
+    body {
+        flex-direction: row;
+    }
+    h1 {
+        display: none;
+    }
+    #game-board {
+        width: 100vmin;
+        height: 100vmin;
+    }
+    .buttons {
+        margin-top: 15%;
+        margin-inline: auto;
+        width: 20vw;
+        height: 20vh;
+        font-size: 8vw;
+    }
 }
