@@ -103,7 +103,7 @@ h1 {
         flex-direction: row;
         gap: 5vw;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
         background: var(var(--clr-600));
         background-image: var(--bg);
         background-repeat: no-repeat;
@@ -115,13 +115,13 @@ h1 {
     #game-board {
         flex: 2 1 50%;
         max-width: 40vw;
+        min-height: 100vh;
     }
     .buttons {
         flex: 1 1 30%;
         margin-inline: auto;
         max-width: 30vw;
-        /* width: 20vw;
-        height: 20vh; */
+        margin-top: 10%;
         font-size: 8vw;
     }
 }
