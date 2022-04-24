@@ -1,5 +1,9 @@
 let inputDirection = {x: 0, y: 0}  // initial value
 let lastInputDirection = {x: 0, y: 0}
+const up = document.querySelector(".up")
+const left = document.querySelector(".left")
+const right = document.querySelector(".right")
+const down = document.querySelector(".down")
 
 // set up code to modify inputDirection on key presses
 window.addEventListener("keydown", e => {
@@ -25,6 +29,12 @@ window.addEventListener("keydown", e => {
             break
     }
 })
+
+// set up input for mobile devices
+up.addEventListener("click", () => (inputDirection = {x: 0, y: -1}))
+left.document.addEventListener("click", () => (inputDirection = {x: -1, y: 0}))
+right.document.addEventListener("click", () => (inputDirection = {x: 1, y: 0}))
+down.document.addEventListener("click", () => (inputDirection = {x: 0, y: 1}))
 
 export function getInputDirection() {
     lastInputDirection = inputDirection
