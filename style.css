@@ -70,13 +70,13 @@ h1 {
 
 .buttons {
     margin-top: 25px;
-    font-size: 30px;
+    font-size: 9vw;
     display: grid;
     grid-template-areas: 
         ". up ."
         "left . right"
         ". down .";
-    width: 20vw;
+    width: 30vw;
     margin-inline: auto;
 }
 
