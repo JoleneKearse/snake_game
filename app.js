@@ -11,7 +11,7 @@ const gameBoard = document.getElementById("game-board")
 function main(currentTime) {
     if (gameOver) {
         // reset game
-        if (confirm("You lost! Press 'OK' to restart on DESKTOP. On MOBILE swip down to refresh.")) {
+        if (confirm("You lost! On MOBILE press 'CANCEL' & swip down to refresh. On desktop, ress 'OK' to restart.")) {
             window.location = "/"
         }
         return
