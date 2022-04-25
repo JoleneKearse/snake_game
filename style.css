@@ -125,3 +125,42 @@ h1 {
         font-size: 8vw;
     }
 }
+
+@media screen and (min-width: 1000px) {
+    body {
+        --bg: linear-gradient(45deg, var(--clr-600), var(--clr-400));
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+            "title title title"
+            "gameboard gameboard buttons";
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 7fr;
+        overflow: hidden;
+        background: var(var(--clr-600));
+        background-image: var(--bg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .title {
+        grid-area: title;
+        font-size: 4rem;
+        margin-bottom: 1vh;
+    }
+    #game-board {
+        grid-area: gameboard;
+        max-height: 90%;
+
+    }
+    .buttons {
+        display: grid;
+        justify-content: right;
+        align-self: center;
+        grid-area: buttons;
+        max-width: 12vw;
+        max-height: 12vh;
+        font-size: 5vw;
+        margin-right: 10vw;
+    }
+}
