@@ -12,7 +12,7 @@ function main(currentTime) {
     if (gameOver) {
         // reset game
         if (confirm("You lost! On MOBILE press 'CANCEL' & swip down to refresh. On desktop, ress 'OK' to restart.")) {
-            window.location = "/"
+            window.location = "https://jolenekearse.github.io/snake_game/"
         }
         return
     }
