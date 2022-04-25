@@ -11,7 +11,7 @@ const gameBoard = document.getElementById("game-board")
 function main(currentTime) {
     if (gameOver) {
         // reset game
-        if (confirm("You lost! On MOBILE press 'CANCEL' & swip down to refresh. On desktop, ress 'OK' to restart.")) {
+        if (confirm("You lost! Press 'OK' to restart.")) {
             window.location = "https://jolenekearse.github.io/snake_game/"
         }
         return
