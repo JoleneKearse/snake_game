@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ---------- CUSTOM PROPERTIES ---------- */
 :root {
     --clr-100: #E5E6E4;
@@ -94,4 +95,171 @@ h1 {
 
 .down {
     grid-area: down;
+=======
+/* ---------- CUSTOM PROPERTIES ---------- */
+:root {
+    --clr-100: #E5E6E4;
+    --clr-200: #F8F4A6;
+    --clr-300: #CC4BC2;
+    --clr-400: #FF8360;
+    --clr-500: #97423A;
+    --clr-600: #2E0014;
+}
+
+/* ---------- RESET ---------- */
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+    /* vertical-align: baseline; */
+}
+
+html {
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    --bg: linear-gradient(45deg, var(--clr-400), var(--clr-600));
+    background: var(var(--clr-600));
+    background-image: var(--bg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Tapestry', cursive;
+    font-size: 1.5rem;
+    color: var(--clr-200);
+    margin-bottom: 25px;
+}
+
+#game-board {
+    background-color: #464646;
+    opacity: .75;
+    width: 90vmin;
+    height: 90vmin;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
+}
+
+.snake {
+    background-color: var(--clr-400);
+    border: .25vmin solid var(--clr-200);
+}
+
+.food {
+    background-color: var(--clr-300);
+    border: .25vmin solid var(--clr-200);
+}
+
+.buttons {
+    margin-top: 25px;
+    font-size: 20vw;
+    display: grid;
+    grid-template-areas: 
+        ". up ."
+        "left . right"
+        ". down .";
+    width: 65vw;
+    margin-inline: auto;
+}
+
+.up {
+    grid-area: up;
+}
+
+.left {
+    grid-area: left;
+}
+
+.right {
+    grid-area: right;
+}
+
+.down {
+    grid-area: down;
+}
+
+@media screen and (max-height: 450px) and (orientation: landscape) {
+    body {
+        --bg: linear-gradient(45deg, var(--clr-600), var(--clr-400));
+        display: flex;
+        flex-direction: row;
+        gap: 5vw;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        background: var(var(--clr-600));
+        background-image: var(--bg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1 {
+        display: none;
+    }
+    #game-board {
+        flex: 2 1 50%;
+        max-width: 40vw;
+        min-height: 100vh;
+    }
+    .buttons {
+        flex: 1 1 30%;
+        margin-inline: auto;
+        max-width: 30vw;
+        margin-top: 10%;
+        font-size: 8vw;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        --bg: linear-gradient(45deg, var(--clr-600), var(--clr-400));
+        min-height: 100vh;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+            "title title title"
+            "gameboard gameboard buttons";
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 7fr;
+        overflow: hidden;
+        background: var(var(--clr-600));
+        background-image: var(--bg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .title {
+        grid-area: title;
+        font-size: 4rem;
+        margin-bottom: 1vh;
+    }
+    #game-board {
+        grid-area: gameboard;
+        max-height: 90%;
+
+    }
+    .buttons {
+        display: grid;
+        justify-content: right;
+        align-self: center;
+        grid-area: buttons;
+        max-width: 12vw;
+        max-height: 12vh;
+        font-size: 5vw;
+        margin-right: 10vw;
+    }
+>>>>>>> 284018c351add9e86c5ab4b571ad60b709fab6e0
 }
